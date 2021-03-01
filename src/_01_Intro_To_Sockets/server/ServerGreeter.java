@@ -46,7 +46,7 @@ public class ServerGreeter extends Thread
                 //13. Create a DataOutputStream object. When initializing it, use the Server object you created in step 9 to call the getOutputStream() method.
                 DataOutputStream outputStream = new DataOutputStream(accept.getOutputStream());
                 //14. Use the DataOutputStream object to send a message to the client using the writeUTF(String message) method.
-                outputStream.writeUTF("This is the message I wrote.");
+                outputStream.writeUTF("This is the server sending a message to the client.");
                 //15. Close the client server
                 accept.close();
             } catch (SocketTimeoutException e)
